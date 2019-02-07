@@ -1,0 +1,67 @@
+html, body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+
+    margin: 20px !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+a {
+    color: #000000;
+}
+
+table {
+    margin-right: 15px;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.settings-container {
+    width: 350px !important;
+    height: 500px;
+}
+
+input[type=number], input[type=url] {    
+    height: 42px;
+
+    padding: 12px 20px;
+    margin-top: 2px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+#maxLinkError {
+    margin-left: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#maxLinkSave, #disabledSitesInput {
+    margin-top: -5px !important;
+}
+
+#maxLinkError, #disabledSitesError {
+    color: #E74C3C;
+}
+
+#disabledSitesInput {
+    margin-left: -13px;
+    width: 75%;
+}
+
+#table-wrapper-scroll-y {
+    max-height: 200px;
+    max-width: 100%;
+    width: 100%;
+
+    display: block;
+    overflow-y: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}

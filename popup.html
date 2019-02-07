@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="popup.css">
+
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="popper.min.js"></script>
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="popup.js"></script>
+  </head>
+  <body>
+    <div class="settings-container container">
+      <div class="row">
+        <h4>
+          Max Page Links
+        </h4>
+        <hr/>
+        <div class="row">
+          <div class="col-12">
+            <p>When should Linky disable itself? <a href="#" data-toggle="tooltip" title="Linky will not run on pages with more than this many links. Leave value as 0, and Linky will always run."><i class="fas fa-info-circle"></i></a></p>
+          </div>
+          <div class="col-12">
+            <input type="number" id="maxLinkInput" min="0" max="100000" />
+            <button type="button" id="maxLinkSave" class="btn btn-secondary">Save</button>
+          </div>
+          <p id="maxLinkError"></p>
+        </div>
+      </div>
+
+    <div class="row">
+      <h4>Disabled Sites</h4>
+      <p>Linky will not run on any pages with URLs below</p>
+
+      <div class="col-12">
+        <input type="url" name="url" id="disabledSitesInput"
+        placeholder="https://example.com"
+        pattern="https?://.*" size="30"
+        required>
+
+        <button type="button" id="disabledSitesSave" class="btn btn-secondary">Save</button>
+      </div>
+      <p id="disabledSitesError"></p>
+
+        <div id="table-wrapper-scroll-y">
+          <table id="disbled-site-table" class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col-6">Link Base URL <a href="#" data-toggle="tooltip" title="Linky only stores the base URL. It uses regex to match full URLs."><i class="fas fa-info-circle"></i></a></th>
+                <th scope="col-4">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="disbled-site-table-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
